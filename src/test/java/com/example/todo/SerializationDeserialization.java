@@ -33,4 +33,22 @@ class SerializationDeserialization {
         assertThat(json.write(todo)).extractingJsonPathBooleanValue("@.completed")
                 .isEqualTo(false);
     }
+    @Test
+    void todoDeserializationTest() throws IOException {
+        Todo todo = new Todo(99L, "Hello", true);
+
+        String expected = """
+           {
+               "id":99,
+               "title":"Hello",
+               "completed":true
+           }
+           """;
+
+        assertThat(json.parse(expected))
+                .isEqualTo(todo);
+
+        assertThat(json.parseObject(expected).completed()).isEqualTo(true);
+    }
 }
+
