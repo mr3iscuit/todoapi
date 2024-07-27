@@ -1,0 +1,36 @@
+package com.example.todo;
+
+import com.example.todo.model.Todo;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.json.JsonTest;
+import org.springframework.boot.test.json.JacksonTester;
+
+import java.io.IOException;
+
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+
+@JsonTest
+class SerializationDeserialization {
+    @Autowired
+    private JacksonTester<Todo> json;
+
+    @Test
+    void todoSerializationTest() throws IOException {
+        Todo todo = new Todo(99L, "Test", false);
+
+        // assertThat(json.write(todo)).isStrictlyEqualToJson("expected.json");
+
+        assertThat(json.write(todo)).hasJsonPathNumberValue("@.id");
+        assertThat(json.write(todo)).extractingJsonPathNumberValue("@.id")
+                .isEqualTo(99); // TODO handle long values correctly
+
+        assertThat(json.write(todo)).hasJsonPathStringValue("@.title");
+        assertThat(json.write(todo)).extractingJsonPathStringValue("@.title")
+                .isEqualTo("Test");
+
+        assertThat(json.write(todo)).hasJsonPathBooleanValue("@.completed");
+        assertThat(json.write(todo)).extractingJsonPathBooleanValue("@.completed")
+                .isEqualTo(false);
+    }
+}
