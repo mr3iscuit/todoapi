@@ -18,8 +18,17 @@ public class GetTodoController {
 
     @Test
     void shouldReturnATodoWhenDataIsSaved() {
-        ResponseEntity<String> response = restTemplate.getForEntity("/todos/99", String.class);
+        var requestedId = 99L;
+        ResponseEntity<String> response = restTemplate.getForEntity(
+            String.format("/todos/%d", requestedId),
+            String.class
+        );
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+
+        DocumentContext documentContext = JsonPath.parse(response.getBody());
+        Number id = documentContext.read("$.id");
+        assertThat(id).isNotNull();
+        assertThat(id).isEqualTo((int) requestedId); // TODO handle Long correctly.
     }
 }
