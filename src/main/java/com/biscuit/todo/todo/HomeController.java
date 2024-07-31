@@ -1,4 +1,4 @@
-package com.biscuit.todo;
+package com.biscuit.todo.todo;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,5 +1,6 @@
 package com.biscuit.todo;
 
+import com.biscuit.todo.todo.Todo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
@@ -48,6 +49,6 @@ class SerializationDeserialization {
         assertThat(json.parse(expected))
                 .isEqualTo(todo);
 
-        assertThat(json.parseObject(expected).completed()).isEqualTo(true);
+        assertThat(json.parseObject(expected).getCompleted()).isEqualTo(true);
     }
 }
