@@ -1,6 +1,5 @@
-package com.example.todo;
+package com.biscuit.todo;
 
-import com.example.todo.model.Todo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
@@ -33,17 +32,18 @@ class SerializationDeserialization {
         assertThat(json.write(todo)).extractingJsonPathBooleanValue("@.completed")
                 .isEqualTo(false);
     }
+
     @Test
     void todoDeserializationTest() throws IOException {
         Todo todo = new Todo(99L, "Hello", true);
 
         String expected = """
-           {
-               "id":99,
-               "title":"Hello",
-               "completed":true
-           }
-           """;
+                {
+                    "id":99,
+                    "title":"Hello",
+                    "completed":true
+                }
+                """;
 
         assertThat(json.parse(expected))
                 .isEqualTo(todo);
@@ -51,4 +51,3 @@ class SerializationDeserialization {
         assertThat(json.parseObject(expected).completed()).isEqualTo(true);
     }
 }
-
