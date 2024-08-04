@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import com.biscuit.todo.enums.Importance;
 
 @Entity
 @Data
@@ -18,6 +19,17 @@ public class Todo {
     private Long id;
     private String title;
     private Boolean completed;
+
+    @Enumerated(EnumType.ORDINAL)
+    private Importance importance;
+
+    public Importance getImportance() {
+        return this.importance;
+    }
+
+    public void setImportance(Importance i) {
+        this.importance = i;
+    }
 
     public Todo(Long id, String title, boolean completed) {
         this.id = id;
