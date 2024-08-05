@@ -17,10 +17,14 @@ public class TodoService {
     }
 
     public Todo saveTodo(Todo newTodo) {
+        if (newTodo.getCompleted() == null || newTodo.getImportance() == null || newTodo.getTitle() == null) {
+            throw new ResourceValidationException();
+        }
+
         return todoRepository.save(newTodo);
     }
 
-    public Todo update(Long id, TodoPatchDTO todoDetails) throws NotImplementedException {
+    public Todo update(Long id, TodoPatchDTO todoDetails) {
         Todo existingTodo = todoRepository.findById(id)
                 .orElseThrow(() -> new TodoNotFoundException("Todo not found"));
 
@@ -40,7 +44,7 @@ public class TodoService {
         return todoRepository.save(existingTodo);
     }
 
-    public Todo getTodoById(Long id) throws TodoNotFoundException {
+    public Todo getTodoById(Long id) {
         Optional<Todo> todo = todoRepository.findById(id);
 
         if (todo.isEmpty()) {
@@ -50,7 +54,7 @@ public class TodoService {
         return todo.get();
     }
 
-    public void deleteTodo(Long id) throws NotImplementedException {
+    public void deleteTodo(Long id) {
         throw new NotImplementedException("deleteTodo Method not implemeted yet.");
     }
 
