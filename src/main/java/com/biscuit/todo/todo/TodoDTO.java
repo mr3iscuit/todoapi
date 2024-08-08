@@ -2,7 +2,7 @@ package com.biscuit.todo.todo;
 
 import com.biscuit.todo.enums.Importance;
 
-public class TodoPatchDTO {
+public class TodoDTO {
     private String title;
     private Boolean completed;
     private Importance importance;

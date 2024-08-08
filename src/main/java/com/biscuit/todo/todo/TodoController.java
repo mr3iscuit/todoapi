@@ -40,7 +40,7 @@ public class TodoController {
     @PostMapping
     private ResponseEntity<Void> createCashCard(
             @PathVariable Long userId,
-            @RequestBody Todo newTodoRequest,
+            @RequestBody TodoDTO newTodoRequest,
             UriComponentsBuilder ucb) {
 
         Todo savedTodo = todoService.saveTodo(userId, newTodoRequest);
@@ -67,7 +67,7 @@ public class TodoController {
     private ResponseEntity<Void> updateCashCard(
             @PathVariable Long userId,
             @PathVariable Long id,
-            @RequestBody TodoPatchDTO todoDetails,
+            @RequestBody TodoDTO todoDetails,
             UriComponentsBuilder ucb) {
 
         Todo savedTodo = todoService.update(userId, id, todoDetails);

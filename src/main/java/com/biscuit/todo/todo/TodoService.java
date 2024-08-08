@@ -30,12 +30,12 @@ public class TodoService {
         return todoRepository.save(newTodo);
     }
 
-    public Todo saveTodo(Long userId, Todo newTodoRequest) {
+    public Todo saveTodo(Long userId, TodoDTO newTodoRequest) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'saveTodo'");
     }
 
-    public Todo update(Long id, TodoPatchDTO todoDetails) {
+    public Todo update(Long id, TodoDTO todoDetails) {
         Todo existingTodo = todoRepository.findById(id)
                 .orElseThrow(() -> new TodoNotFoundException("Todo not found"));
 
@@ -55,7 +55,7 @@ public class TodoService {
         return todoRepository.save(existingTodo);
     }
 
-    public Todo update(Long userId, Long id, TodoPatchDTO todoDetails) {
+    public Todo update(Long userId, Long id, TodoDTO todoDetails) {
         Todo existingTodo = todoRepository.findById(id)
                 .orElseThrow(() -> new TodoNotFoundException("Todo not found"));
 
@@ -98,10 +98,10 @@ public class TodoService {
 
     public Todo getTodoById(Long userId, Long id) {
         User user = userRepository.findById(userId)
-            .orElseThrow(() -> new UserNotFoundException("User not found"));
+                .orElseThrow(() -> new UserNotFoundException("User not found"));
 
         Todo todo = todoRepository.findById(id)
-            .orElseThrow(() -> new TodoNotFoundException());
+                .orElseThrow(() -> new TodoNotFoundException());
 
         if (todo.getUser() != user) {
             throw new TodoNotFoundException("No available Todo found for user");
