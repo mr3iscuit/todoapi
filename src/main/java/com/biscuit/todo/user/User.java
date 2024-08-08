@@ -1,4 +1,4 @@
-package com.biscuit.user;
+package com.biscuit.todo.user;
 
 import java.util.ArrayList;
 import java.util.List;

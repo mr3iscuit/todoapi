@@ -1,9 +1,7 @@
 package com.biscuit.todo.todo;
 
-import com.biscuit.todo.exception.NotImplementedException;
 import com.biscuit.todo.exception.ResourceValidationException;
 import com.biscuit.todo.exception.TodoNotFoundException;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -40,8 +38,10 @@ public class TodoController {
     }
 
     @PostMapping
-    private ResponseEntity<Void> createCashCard(@PathVariable Long userId, @RequestBody Todo newTodoRequest, UriComponentsBuilder ucb)
-            throws NotImplementedException {
+    private ResponseEntity<Void> createCashCard(
+            @PathVariable Long userId,
+            @RequestBody Todo newTodoRequest,
+            UriComponentsBuilder ucb) {
 
         Todo savedTodo = todoService.saveTodo(userId, newTodoRequest);
 

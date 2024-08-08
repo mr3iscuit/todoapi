@@ -1,6 +1,6 @@
 package com.biscuit.todo.todo;
 
-import com.biscuit.user.User;
+import com.biscuit.todo.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,7 +29,15 @@ public class Todo {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Importance getImportance() {
+    public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Importance getImportance() {
         return this.importance;
     }
 
