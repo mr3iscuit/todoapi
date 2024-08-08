@@ -1,5 +1,6 @@
 package com.biscuit.todo.todo;
 
+import com.biscuit.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,6 +15,7 @@ import com.biscuit.todo.enums.Importance;
 @AllArgsConstructor
 @Builder
 public class Todo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,6 +24,10 @@ public class Todo {
 
     @Enumerated(EnumType.ORDINAL)
     private Importance importance;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Importance getImportance() {
         return this.importance;

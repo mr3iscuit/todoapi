@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/todos")
+@RequestMapping("/users/{userId}/todos/")
 public class TodoController {
 
     private final TodoService todoService;
