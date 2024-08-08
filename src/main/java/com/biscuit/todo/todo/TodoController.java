@@ -25,8 +25,8 @@ public class TodoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Todo> getTodo(@PathVariable Long id) {
-        return ResponseEntity.ok(todoService.getTodoById(id));
+    public ResponseEntity<Todo> getTodo(@PathVariable Long userId, @PathVariable Long id) {
+        return ResponseEntity.ok(todoService.getTodoById(userId, id));
     }
 
     @ExceptionHandler(TodoNotFoundException.class)
@@ -35,15 +35,15 @@ public class TodoController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<Todo>> getAllTodo() {
-        return ResponseEntity.ok(todoService.getAllTodos());
+    public ResponseEntity<List<Todo>> getAllTodo(@PathVariable Long userId) {
+        return ResponseEntity.ok(todoService.getAllTodos(userId));
     }
 
     @PostMapping
-    private ResponseEntity<Void> createCashCard(@RequestBody Todo newTodoRequest, UriComponentsBuilder ucb)
+    private ResponseEntity<Void> createCashCard(@PathVariable Long userId, @RequestBody Todo newTodoRequest, UriComponentsBuilder ucb)
             throws NotImplementedException {
 
-        Todo savedTodo = todoService.saveTodo(newTodoRequest);
+        Todo savedTodo = todoService.saveTodo(userId, newTodoRequest);
 
         URI locationOfNewTodo = ucb
                 .path("todos/{id}")
@@ -65,11 +65,12 @@ public class TodoController {
 
     @PatchMapping("/{id}")
     private ResponseEntity<Void> updateCashCard(
+            @PathVariable Long userId,
             @PathVariable Long id,
             @RequestBody TodoPatchDTO todoDetails,
             UriComponentsBuilder ucb) {
 
-        Todo savedTodo = todoService.update(id, todoDetails);
+        Todo savedTodo = todoService.update(userId, id, todoDetails);
         URI locationOfNewTodo = ucb
                 .path("todos/{id}")
                 .buildAndExpand(savedTodo.getId())
