@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/users/{userId}/todos/")
+@RequestMapping("/todos")
 public class TodoController {
 
     private final TodoService todoService;
@@ -23,8 +23,8 @@ public class TodoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Todo> getTodo(@PathVariable Long userId, @PathVariable Long id) {
-        return ResponseEntity.ok(todoService.getTodoById(userId, id));
+    public ResponseEntity<TodoGetDTO> getTodo(@PathVariable Long id) {
+        return ResponseEntity.ok(todoService.getTodoById(id));
     }
 
     @ExceptionHandler(TodoNotFoundException.class)
@@ -32,21 +32,20 @@ public class TodoController {
         return ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/")
-    public ResponseEntity<List<Todo>> getAllTodo(@PathVariable Long userId) {
-        return ResponseEntity.ok(todoService.getAllTodos(userId));
+    @GetMapping()
+    public ResponseEntity<List<TodoGetDTO>> getAllTodo() {
+        return ResponseEntity.ok(todoService.getAllTodosForCurrentUser());
     }
 
     @PostMapping
     private ResponseEntity<Void> createCashCard(
-            @PathVariable Long userId,
-            @RequestBody TodoDTO newTodoRequest,
+            @RequestBody TodoPostDTO newTodoRequest,
             UriComponentsBuilder ucb) {
 
-        Todo savedTodo = todoService.saveTodo(userId, newTodoRequest);
+        TodoEntity savedTodo = todoService.saveTodo(newTodoRequest);
 
         URI locationOfNewTodo = ucb
-                .path("todos/{id}")
+                .path("/todos/{id}")
                 .buildAndExpand(savedTodo.getId())
                 .toUri();
 
@@ -65,12 +64,11 @@ public class TodoController {
 
     @PatchMapping("/{id}")
     private ResponseEntity<Void> updateCashCard(
-            @PathVariable Long userId,
             @PathVariable Long id,
-            @RequestBody TodoDTO todoDetails,
+            @RequestBody TodoPostDTO todoDetails,
             UriComponentsBuilder ucb) {
 
-        Todo savedTodo = todoService.update(userId, id, todoDetails);
+        TodoEntity savedTodo = todoService.update(id, todoDetails);
         URI locationOfNewTodo = ucb
                 .path("todos/{id}")
                 .buildAndExpand(savedTodo.getId())

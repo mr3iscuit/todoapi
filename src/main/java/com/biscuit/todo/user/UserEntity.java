@@ -1,6 +1,8 @@
 package com.biscuit.todo.user;
 
-import com.biscuit.todo.todo.Todo;
+import com.biscuit.todo.todo.TodoEntity;
+import com.biscuit.todo.token.Token;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,20 +21,23 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "_user")
-public class User implements UserDetails {
+// @Table(name = "_user")
+public class UserEntity implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "user")
-    private List<Todo> resources = new ArrayList<>();
-
     private String firstname;
     private String lastname;
     private String email;
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    private List<TodoEntity> resources = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<Token> tokens;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -41,7 +46,7 @@ public class User implements UserDetails {
         this.id = id;
     }
 
-    public void setResources(final List<Todo> resources) {
+    public void setResources(final List<TodoEntity> resources) {
         this.resources = resources;
     }
 
@@ -49,7 +54,7 @@ public class User implements UserDetails {
         return id;
     }
 
-    public List<Todo> getResources() {
+    public List<TodoEntity> getResources() {
         return resources;
     }
 
@@ -89,7 +94,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return null;
+        return email;
     }
 
     @Override

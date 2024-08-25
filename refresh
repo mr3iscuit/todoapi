@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Update build.gradle
+./gradlew build
+./gradlew clean
+
+# Update Eclipse
+./gradlew eclipse

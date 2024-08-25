@@ -1,8 +1,9 @@
 package com.biscuit.todo.todo;
 
-import com.biscuit.todo.enums.Importance;
+import lombok.Builder;
 
-public class TodoDTO {
+@Builder
+public class TodoPostDTO {
     private String title;
     private Boolean completed;
     private Importance importance;

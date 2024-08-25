@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99768716-ddbb-4ef2-90a5-9140c82d2970" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auditing/ApplicationAuditAware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/LogoutService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/SecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/exception/AccessDeniedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoGetDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/token/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/token/TokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/token/TokenType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/ChangePasswordRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/enums/Importance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/Importance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/Todo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoPostDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applications.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applications.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Todo" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Todo" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2jqZHgkPHLtmlXV8KRhIiX9qrK3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.App.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.AppTest.executor": "Run",
+    "Gradle.AppTest.welcomeShouldReturnOk.executor": "Run",
+    "Gradle.Build Todo.executor": "Run",
+    "Gradle.ControllerTest.executor": "Run",
+    "Gradle.DemoApplicationTests (1).executor": "Run",
+    "Gradle.DemoApplicationTests.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.GetTodoController.executor": "Run",
+    "Gradle.GetTodoController.shouldReturnATodoWhenDataIsSaved.executor": "Run",
+    "Gradle.HomeControllerTest (1).executor": "Run",
+    "Gradle.HomeControllerTest.executor": "Run",
+    "Gradle.HomeControllerTest.shouldCreateANewTodo.executor": "Run",
+    "Gradle.HomeControllerTest.testTodosGetEndpointReturns200.executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.SerializationDeserialization.cashCardDeserializationTest.executor": "Run",
+    "Gradle.SerializationDeserialization.executor": "Run",
+    "Gradle.SerializationDeserialization.todoDeserializationTest.executor": "Run",
+    "Gradle.SerializationDeserialization.todoSerializationTest.executor": "Run",
+    "Gradle.Todo [:App.main()].executor": "Run",
+    "Gradle.Todo [dependencies].executor": "Run",
+    "Gradle.Todo [test].executor": "Run",
+    "JUnit.SerializationDeserialization.todoSerializationTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/home/biscuit/exercism/java/Todo/src/test/java/com/example/todo",
+    "last_opened_file_path": "/home/biscuit/IdeaProjects/Todo",
+    "onboarding.tips.debug.path": "/home/biscuit/exercism/java/Todo/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.biscuit.todo.todo" />
+      <recent name="com.biscuit.todo.exception" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.biscuit.todo.todo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.biscuit.todo.todo" />
+      <recent name="com.biscuit.todo" />
+      <recent name="com.biscuit.todo.auth" />
+      <recent name="com.biscuit.todo.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App (1)">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.biscuit.todo.App" />
+      <module name="Todo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.biscuit.todo.auditing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.biscuit.todo.App" />
+      <module name="Todo.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.biscuit.todo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeControllerTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.biscuit.todo.HomeControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="HomeControllerTest.shouldCreateANewTodo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.biscuit.todo.HomeControllerTest.shouldCreateANewTodo&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="HomeControllerTest.testTodosGetEndpointReturns200" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.biscuit.todo.HomeControllerTest.testTodosGetEndpointReturns200&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App (1)" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Gradle.HomeControllerTest (1)" />
+        <item itemvalue="Gradle.HomeControllerTest.testTodosGetEndpointReturns200" />
+        <item itemvalue="Gradle.HomeControllerTest.shouldCreateANewTodo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99768716-ddbb-4ef2-90a5-9140c82d2970" name="Changes" comment="" />
+      <created>1722116482562</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722116482562</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

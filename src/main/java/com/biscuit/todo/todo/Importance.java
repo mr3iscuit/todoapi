@@ -1,4 +1,4 @@
-package com.biscuit.todo.enums;
+package com.biscuit.todo.todo;
 
 public enum Importance {
     A, // More Important

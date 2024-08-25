@@ -1,20 +1,23 @@
 package com.biscuit.todo.todo;
 
-import com.biscuit.todo.user.User;
+import com.biscuit.todo.user.UserEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
-import com.biscuit.todo.enums.Importance;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Todo {
+@Table(name = "_todo")
+public class TodoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,15 +28,26 @@ public class Todo {
     @Enumerated(EnumType.ORDINAL)
     private Importance importance;
 
+    @CreatedDate
+    @Column(
+            nullable = false,
+            updatable = false
+    )
+    private LocalDateTime createDate;
+
+    @LastModifiedDate
+    @Column(insertable = false)
+    private LocalDateTime lastModified;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private UserEntity user;
 
-    public User getUser() {
+    public UserEntity getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(UserEntity user) {
 		this.user = user;
 	}
 
@@ -45,7 +59,7 @@ public class Todo {
         this.importance = i;
     }
 
-    public Todo(Long id, String title, boolean completed) {
+    public TodoEntity(Long id, String title, boolean completed) {
         this.id = id;
         this.title = title;
         this.completed = completed;
