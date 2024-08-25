@@ -5,47 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99768716-ddbb-4ef2-90a5-9140c82d2970" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auditing/ApplicationAuditAware.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/LogoutService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/exception/AccessDeniedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoGetDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/token/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/token/TokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/token/TokenType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/ChangePasswordRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/auth/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/enums/Importance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/Importance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/Todo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoPostDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/todo/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applications.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applications.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/biscuit/todo/config/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applications.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
