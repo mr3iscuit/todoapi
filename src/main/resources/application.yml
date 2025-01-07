@@ -1,7 +1,3 @@
-springdoc:
-  api-docs:
-    path: /api-docs
-
 application:
   security:
     jwt:
@@ -9,3 +5,6 @@ application:
       expiration: 86400000
       refresh-token:
         expiration: 604800000
+
+server:
+  port : 4000
